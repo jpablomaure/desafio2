@@ -9,42 +9,56 @@
     <meta name="keywords" content="almohadon, fusta, perchero, vela, lampara">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Tienda</title>
 </head>
 
 <body>
-    <header>
     <!-- INICIO menu navegacion -->
     <div id="root"></div>
-  
+    <!-- <nav class="navbar navbar-expand-sm navbar-light ">
+        <a class="navbar-brand" href="../../public/index.html"> <img src="../img/logo.png" heigth="96px" width="170px"
+                alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="btn btn-sm btn-outline-secondary" href="#">HOME</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">NOSOTROS</a>
+                <a class="btn btn-sm btn-outline-secondary" href="../public/index.html">TIENDA</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">SERVICIOS</a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">CONTACTO</a>
+            </div>
+        </div>
+    </nav> -->
     <!-- FIN menu navegacion -->
     </header>
     <main>
         <!--  Inicio contenido principal -->
         <div class="titulo">
-            <h1>TIENDA</h1>
+            <h1>SU CARRITO</h1>
         </div>
-        <div><input type="text" id="buscarProducto">
-            <button onclick="buscarProducto()" id="botonBuscar">Buscar Producto</button>
-            <button onclick="generarCards(productos)" id="reset">Reset</button>
-        </div>
-        <form class="d-flex">
-            <button class="btn btn-outline-dark" type="button" onclick="location.href='#';">
-                <i class="bi-cart-fill me-1"></i>
-                Carrito
-                <span class="badge bg-dark text-white ms-1 rounded-pill" id="cantidad-prod">
-                    0
-                </span>
-            </button>
-        </form>
         <div class="container">
             <div class="row">
-                <section id="product" class="tienda ">
+                <section id="mostrarCarrito" class="tienda ">
 
                 </section>
+
                 <!-- Fin contenido principal  -->
+            </div>
+            <div>
+                <button onclick="vaciarCarrito();">Vaciar carrito</button>
+            </div>
+
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row" id="totalDelCarrito">
+                <section>
+                    <h2 id="totalCarrito">El total del carrito es 0 </h2>
+                </section>
             </div>
         </div>
     </main>
@@ -71,8 +85,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./script/tienda.js"></script>
+    <script src="../script/carrito.js"></script>
 </body>
 
 </html>
