@@ -1,12 +1,12 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NavBar from '../src/components/Navbar';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar />
+    <App />
   </React.StrictMode>
 );
-

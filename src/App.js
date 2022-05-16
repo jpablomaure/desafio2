@@ -1,4 +1,5 @@
 import './App.css';
+import NavBar from './components/Navbar';
 
 function App() {
   return (
@@ -9,3 +10,10 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
