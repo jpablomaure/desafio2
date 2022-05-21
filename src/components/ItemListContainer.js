@@ -1,7 +1,11 @@
+import ItemCount from './ItemCount.js';
 
 const ItemListContainer = ({greeting}) => {
     return (
-        <p>Hola {greeting}</p>
+        <>
+        <p>{greeting}</p>
+        <ItemCount />
+        </>
     )
 };
 
