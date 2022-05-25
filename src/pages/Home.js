@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <NavBar />
-            <ItemListContainer greeting="ItemListContainer" />
+            <ItemListContainer greeting="Carrito de compras" />
         </div>
     )
 };
