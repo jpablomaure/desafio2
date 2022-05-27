@@ -1,4 +1,4 @@
-import ItemCount from './ItemCount.js';
+// import ItemCount from './ItemCount.js';
 import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
@@ -14,15 +14,14 @@ const ItemListContainer = () => {
             .catch(err => console.log(err))
     }, []);
 
-    const onAdd = (cant) => {
+    // const onAdd = (cant) => {
 
-        alert('Has agregado ' + cant + ' items al carrito');
-    }
+    //     alert('Has agregado ' + cant + ' items al carrito');
+    // }
 
     return (
         <>
         <ItemList items={datos} />
-        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
         </>
     )
 };
