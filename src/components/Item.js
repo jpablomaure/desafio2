@@ -1,17 +1,10 @@
 const Item = ({ id , titulo , precio , stock }) => {
     return (
-
     <>
-
-    <div>
-        <p>producto nro: {id}: </p>{titulo}
-    </div>
-    <div>
-        {precio}
-    </div>
-    <div>
-        {stock}
-    </div>
+        <p>{titulo}</p>
+        <div className={`producto--prod${id}`}></div>
+        <p>${precio}</p>
+        <p>Stock: {stock}</p>
     </>
     )
 };
