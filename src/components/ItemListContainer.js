@@ -14,11 +14,6 @@ const ItemListContainer = () => {
             .catch(err => console.log(err))
     }, []);
 
-    const onAdd = (cant) => {
-
-        alert('Has agregado ' + cant + ' items al carrito');
-    }
-
     return (
         <>
         <ItemList items={datos} />
