@@ -2,6 +2,11 @@
 import ItemCount from './ItemCount.js';
 
 const itemDetail = ({item}) => {
+
+    const onAdd = (cant) => {
+
+        alert('Has agregado ' + cant + ' items al carrito');
+    }
     
     return (
         <>
@@ -14,14 +19,17 @@ const itemDetail = ({item}) => {
                     <p>${item.precio}</p>
                     <p>Stock: {item.stock}</p>
                 </div>
+                <div>
+                <ItemCount stock={item.stock} initial={1} onAdd={onAdd}  />
+                </div>
             </div>
             
-                    <div className="producto">
+                    <div className="descripcion">
                         <strong>Descripcion: </strong>
                         {item.descripcion}
                     </div>
                     
-            <ItemCount stock={item.stock} initial={1}  />
+            
 
         </div>
 

@@ -13,15 +13,11 @@ const ItemDetailContainer = () => {
         .catch(err => console.log(err))
     },[]);
 
-    const onAdd = (cant) => {
 
-        alert('Has agregado ' + cant + ' items al carrito');
-    }
 
     return (
         <>
         <ItemDetail item={datos} />
-
         </>
     );
 }

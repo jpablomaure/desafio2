@@ -258,6 +258,15 @@ footer {
     @include pm(10px, 10px);
 }
 
+.descripcion {
+    width: 600px;
+    height: 250px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #F0EFEB;
+    text-align: center;
+}
+
 .producto {
     width: 200px;
     height: 250px;

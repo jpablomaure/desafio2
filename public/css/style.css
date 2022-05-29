@@ -211,6 +211,17 @@ footer {
   margin: 10px;
 }
 
+.descripcion {
+  width: 600px;
+  height: 250px;
+  margin-left: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #F0EFEB;
+  text-align: left;
+  justify-content: right;
+}
+
 .producto {
   width: 200px;
   height: 330px;
