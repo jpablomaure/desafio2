@@ -29,7 +29,7 @@ const products = [
         precio: 6500,
         stock: 56,
         imagen: "../public/img/tienda4.jpg",
-        descripcion: "Perchero de madera de 5 perchas"
+        descripcion: "Perchero nórdico de pino de 60cm de diametro"
     },
     {
         id: 5,
