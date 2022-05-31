@@ -1,10 +1,4 @@
-import Item from "./Item";
-import ItemCount from './ItemCount.js';
 
-// const onAdd = (cant) => {
-
-//     alert('Has agregado ' + cant + ' items al carrito');
-// }
 const ItemList = ({ items }) => {
     
     return (

@@ -23,14 +23,10 @@ const itemDetail = ({item}) => {
                 <ItemCount stock={item.stock} initial={1} onAdd={onAdd}  />
                 </div>
             </div>
-            
                     <div className="descripcion">
                         <strong>Descripcion: </strong>
                         {item.descripcion}
                     </div>
-                    
-            
-
         </div>
 
         </>

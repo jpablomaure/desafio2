@@ -2,18 +2,28 @@ const products = [
     {
         id: 1,
         titulo: "Aromatizador",
-        precio: 1500,
+        precio: 1300,
         stock: 10,
         imagen: "../public/img/tienda1.jpg",
-        descripcion: "Aromatizador con gatillo, etiqueta de 500 ml"
+        descripcion: "Aromatizador con gatillo, etiqueta de 500 ml",
+        categoriaId: 1,
+        categoria: {
+            nombre: "Esencias",
+            id: 1
+        }
     },
     {
         id: 2,
         titulo: "Sillón",
-        precio: 35000,
+        precio: 69000,
         stock: 32,
         imagen: "../public/img/tienda2.jpg",
-        descripcion: "Sillon Luis XII, madera brasilera, tachas importadas y pana de primera calidad"
+        descripcion: "Sillon Luis XII, madera brasilera, tachas importadas y pana de primera calidad",
+        categoriaId: 2,
+        categoria: {
+            nombre: "Muebles",
+            id: 2
+        }
     },
     {
         id: 3,
@@ -21,7 +31,12 @@ const products = [
         precio: 11300,
         stock: 2,
         imagen: "../public/img/tienda3.jpg",
-        descripcion: "Lámpara escocesa pequña "
+        descripcion: "Lámpara escocesa pequña ",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 4,
@@ -29,7 +44,12 @@ const products = [
         precio: 6500,
         stock: 56,
         imagen: "../public/img/tienda4.jpg",
-        descripcion: "Perchero nórdico de pino de 60cm de diametro"
+        descripcion: "Perchero nórdico de pino de 60cm de diametro",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 5,
@@ -37,7 +57,12 @@ const products = [
         precio: 28500,
         stock: 15,
         imagen: "../public/img/tienda5.jpg",
-        descripcion: "Sillón de pie de cama en varios colores"
+        descripcion: "Sillón de pie de cama en varios colores",
+        categoriaId: 2,
+        categoria: {
+            nombre: "Muebles",
+            id: 2
+        }
     },
     {
         id: 6,
@@ -45,7 +70,12 @@ const products = [
         precio: 1300,
         stock: 20,
         imagen: "../public/img/tienda6.jpg",
-        descripcion: "velas aromáticas de aceite vegetal"
+        descripcion: "velas aromáticas de aceite vegetal",
+        categoriaId: 1,
+        categoria: {
+            nombre: "Esencias",
+            id: 1
+        }
     },
     {
         id: 7,
@@ -53,7 +83,12 @@ const products = [
         precio: 2500,
         stock: 22,
         imagen: "../public/img/tienda7.jpg",
-        descripcion: "Macetero simple de mimbre"
+        descripcion: "Macetero simple de mimbre",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 8,
@@ -61,7 +96,12 @@ const products = [
         precio: 4000,
         stock: 22,
         imagen: "../public/img/tienda8.jpg",
-        descripcion: "Macetero dobre"
+        descripcion: "Macetero dobre",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 9,
@@ -69,7 +109,12 @@ const products = [
         precio: 3250,
         stock: 70,
         imagen: "../public/img/tienda9.jpg",
-        descripcion: "Espejo tipo sol hecho en algo"
+        descripcion: "Espejo tipo sol hecho en algo",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 10,
@@ -77,7 +122,12 @@ const products = [
         precio: 6800,
         stock: 33,
         imagen: "../public/img/tienda10.jpg",
-        descripcion: "Almohadon de varias medidas realizados en tusor de lata calidad y bellon"
+        descripcion: "Almohadon de varias medidas realizados en tusor de lata calidad y bellon",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     },
     {
         id: 11,
@@ -85,7 +135,12 @@ const products = [
         precio: 1000,
         stock: 22,
         imagen: "../public/img/tienda11.jpg",
-        descripcion: "Bordados diversos en cualquier tipo de tela"
+        descripcion: "Bordados diversos en cualquier tipo de tela",
+        categoriaId: 4,
+        categoria: {
+            nombre: "Manuales",
+            id: 4
+        }
     },
     {
         id: 12,
@@ -93,7 +148,12 @@ const products = [
         precio: 9800,
         stock: 26,
         imagen: "../public/img/tienda12.jpg",
-        descripcion: "Almohadones especiales"
+        descripcion: "Almohadones especiales",
+        categoriaId: 3,
+        categoria: {
+            nombre: "Accesorios",
+            id: 3
+        }
     }
 ];
 
