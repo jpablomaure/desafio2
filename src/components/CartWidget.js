@@ -5,7 +5,7 @@ function CartWidget(){
     return (
         <>
             <BsFillCartFill />
-            <Badge bg="secondary"></Badge>
+            <Badge bg="secondary">9</Badge>
         </>
     );
 }

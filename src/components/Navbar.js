@@ -4,10 +4,6 @@ import CartWidget from './CartWidget.js';
 
 function NavBar() {
 
-    const handleKeyDown = (e) => {
-        if (e.keyCode === 32) e.preventDefault();
-    }
-    
     return (
     <>
         <nav className="navbar navbar-expand-sm navbar-light ">
@@ -25,7 +21,6 @@ function NavBar() {
                 <div className="navbar-nav">
                 <Link to='/categoria/2'><div className="btn btn-sm btn-outline-secondary">MUEBLES</div></Link>
                 <Link to='/categoria/3'><div className="btn btn-sm btn-outline-secondary">ACCESORIOS</div></Link>
-                <Input onKeyDown={handleKeyDown} />
                 </div>
             </div>
             <div>
