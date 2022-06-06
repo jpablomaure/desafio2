@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 const ItemCount = ({stock , initial, onAdd }) => {
     const [valor, setValor] = useState(initial);
 
+
     const increment = () => {
         if (valor < stock) {
             setValor(valor+1);

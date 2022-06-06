@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ id , titulo , precio , stock }) => {
     return (
-    <>
-        <p>{titulo}</p>
-        <div className={`producto--prod${id}`}></div>
-        <p>${precio}</p>
-        <p>Stock: {stock}</p>
-    </>
-    )
+        <>
+            <div key={id} className="producto">
+                <p>{titulo}</p>
+                <Link to={`/item/${id}`}><div className={`producto--prod${id}`}></div></Link>
+                <p>${precio}</p>
+                <p>Stock: {stock}</p>
+            </div>
+        </>
+        )
 };
 
 export default Item;
