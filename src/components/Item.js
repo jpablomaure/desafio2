@@ -1,20 +1,16 @@
-// import ItemCount from './ItemCount.js';
-import { link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Item = ({ id , titulo , precio , stock }) => {
-
-    // const onAdd = (cant) => {
-    //     alert('Has agregado' + cant + 'items al carrito');
-    // }
-
     return (
-    <>
-        <p>{titulo}</p>
-        <div className={`producto--prod${id}`}></div>
-        <p>${precio}</p>
-        <p>Stock: {stock}</p>
-    </>
-    )
+        <>
+            <div key={id} className="producto">
+                <p>{titulo}</p>
+                <Link to={`/item/${id}`}><div className={`producto--prod${id}`}></div></Link>
+                <p>${precio}</p>
+                <p>Stock: {stock}</p>
+            </div>
+        </>
+        )
 };
 
 export default Item;
