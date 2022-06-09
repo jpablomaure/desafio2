@@ -2,7 +2,7 @@ import { createContext , useState} from 'react';
 
 export const CartContext = createContext();
 
-const CartContextProvider = ({ hijos }) => { 
+const CartContextProvider = ({ children }) => { 
     const [listaCarrito , SetListaCarrito ] = useState([]);
 
     const agregarAlCarrito = (item , cant ) => {
@@ -44,7 +44,7 @@ const CartContextProvider = ({ hijos }) => {
 
     return (
         <CartContext.Provider value={{listaCarrito , agregarAlCarrito , borrarDelCarrito , borrarCarrito}}>
-            { hijos }
+            { children }
         </CartContext.Provider>
     );
 }
