@@ -13,13 +13,12 @@ const Cart = () => {
                         <>
                         <div key={item.itemId} className="producto">
                             <p>{item.tituloItem}</p>
-                        </div>
+                        
                         <div>
                             <p>${item.valorItem}</p>
-                            <p>Stock: {item.cantItem}</p>
+                            <p>Cantidad elegida: {item.cantItem}</p>
                         </div>
-                        <div>
-                            <strong>Descripcion: {item.tituloItem}</strong>
+                        
                         </div>
                         </>
                     )
