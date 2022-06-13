@@ -368,6 +368,11 @@ footer {
   animation: mueve 1s infinite;
 }
 
+.totalTienda {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
 /* FINALIZA TIENDA  */
 /* INICIA SERVICIOS  */
 .contenedor {
