@@ -1,24 +1,28 @@
 // import ItemCount from './ItemCount.js';
 import ItemList from './ItemList';
-import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-const { products } = require('../utils/products');
+import { firestoreFetch } from '../utils/firestoreFetch';
+
+
 
 const ItemListContainer = () => {
 
     const [datos, setDatos] = useState([]);
-    const { categoriaId} = useParams();
+    const { categoriaId } = useParams();
 
 
     useEffect(() => {
-        customFetch(1000, products.filter(item => {
-            if (categoriaId === undefined) return item;
-            return item.categoriaId === parseInt(categoriaId)
-        }))
+        firestoreFetch(categoriaId)
             .then(result => setDatos(result))
-            .catch(err => console.log(err))
+            .catch(err => console.log(err,"salio error"));
     }, [categoriaId]); //debe tener dependencias para que vuelva a hacer esto cuando el catId cambie
+
+    useEffect(() => {
+        return (() => {
+            setDatos([]);
+        })
+    }, []);
 
     return (
         <>

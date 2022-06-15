@@ -5,7 +5,7 @@ const Item = ({ id , titulo , precio , stock }) => {
         <>
             <div key={id} className="producto">
                 <p>{titulo}</p>
-                <Link to={`/item/${id}`}><div className={`producto--prod${id}`}></div></Link>
+                <Link to={`/item/1`}><div className={`producto--prod${id}`}></div></Link>
                 <p>${precio}</p>
                 <p>Stock: {stock}</p>
             </div>
