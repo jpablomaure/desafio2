@@ -9,7 +9,7 @@ const Cart = () => {
     const acceso = useContext(CartContext);
 
     const crearOrden = () => {
-        const itemXDb = test.listaCarrito.map(item => ({
+        const itemXDb = acceso.listaCarrito.map(item => ({
             id: item.itemId,
             titulo: item.tituloItem,
             precio: item.valorItem
@@ -42,7 +42,7 @@ const Cart = () => {
         }
 
         crearOrdenEnFirestore()
-            .then(result = alert('Su orden ha sido creada. Orden nro: ' + result.id))
+            .then(result => alert('Su orden ha sido creada. Orden nro: ' + result.id))
             .catch(err => console.log(err));
 
         acceso.borrarCarrito();
