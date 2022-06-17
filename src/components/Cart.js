@@ -2,9 +2,51 @@ import { CartContext} from './CartContex';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { serverTimestamp, updateDoc , doc , setDoc , increment , collection} from 'firebase/firestore';
+import db from '../utils/firebaseConfig';
 
 const Cart = () => {
     const acceso = useContext(CartContext);
+
+    const crearOrden = () => {
+        const itemXDb = test.listaCarrito.map(item => ({
+            id: item.itemId,
+            titulo: item.tituloItem,
+            precio: item.valorItem
+        }));
+
+        acceso.listaCarrito.forEach( async (item) => {
+            const refItem = doc(db, "productos", item.itemId);
+            await updateDoc(refItem, {
+                stock: increment(-item.cantItem)
+            });
+        });
+
+        let orden = {
+            comprador: {
+                nombre: "Vanesa Rojas",
+                email: "ver2vero@gmail.com",
+                tel: "26166334455"
+            },
+            total: acceso.calcTotalCarrito(),
+            items: itemXDb,
+            fecha: serverTimestamp()
+        };
+
+        console.log(orden);
+
+        const crearOrdenEnFirestore = async () => {
+            const nuevaOrden = doc(collection(db, "ordenes"));
+            await setDoc(nuevaOrden, orden);
+            return nuevaOrden;
+        }
+
+        crearOrdenEnFirestore()
+            .then(result = alert('Su orden ha sido creada. Orden nro: ' + result.id))
+            .catch(err => console.log(err));
+
+        acceso.borrarCarrito();
+    }
 
     return (
         <div className="container">
@@ -38,7 +80,7 @@ const Cart = () => {
                     : <p>Su carrito esta vacio</p>
                     }
                     <Link to='/'><Button variant="primary" size="lg">Seguir Comprando</Button>{' '}</Link>
-                    <Button variant="primary" size="lg">Pasar por caja</Button>{' '}
+                    <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
                 </div>
             </div>
         </div>
