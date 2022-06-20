@@ -356,7 +356,7 @@ footer {
 .producto .producto--prod11:hover {
   animation: mueve 1s infinite;
 }
-.producto .producto--prod12 {
+/* .producto .producto--prod12 {
   width: 150px;
   height: 150px;
   padding: 10px;
@@ -366,7 +366,7 @@ footer {
 }
 .producto .producto--prod12:hover {
   animation: mueve 1s infinite;
-}
+} */
 
 .totalTienda {
   margin-left: 10px;

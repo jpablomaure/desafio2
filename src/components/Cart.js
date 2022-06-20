@@ -70,18 +70,22 @@ const Cart = () => {
                 }
             </div>
             <div className="container">
-                <div className="row">
-                    <p className="totalTienda"><strong>Total del Carrito: </strong>$ {acceso.calcTotalCarrito()}</p>
-                </div>
-                <div className="row totalTienda">
-                    { 
-                        (acceso.listaCarrito.length > 0)
-                    ? <Button onClick={() => acceso.borrarCarrito()} variant="primary" size="lg">Vaciar Carrito</Button>
-                    : <p>Su carrito esta vacio</p>
-                    }
-                    <Link to='/'><Button variant="primary" size="lg">Seguir Comprando</Button>{' '}</Link>
-                    <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
-                </div>
+                { 
+                    (acceso.listaCarrito.length > 0)
+                    ? <>
+                        <div className="row">
+                            <p className="totalTienda"><strong>Total del Carrito: </strong>$ {acceso.calcTotalCarrito()}</p>
+                        </div>
+                        <div className="row totalTienda">
+                        <Button onClick={() => acceso.borrarCarrito()} variant="primary" size="lg">Vaciar Carrito</Button>
+                        <Link to='/'><Button variant="primary" size="lg">Seguir Comprando</Button>{' '}</Link>
+                        <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
+                        </div>
+                        </>
+                    : <Link to='/'><Button variant="primary" size="lg">Ir a comprar</Button>{' '}</Link>
+                }
+
+                
             </div>
         </div>
     );
