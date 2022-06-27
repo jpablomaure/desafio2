@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemCount = ({stock , initial, onAdd }) => {
     const [valor, setValor] = useState(initial);
+
 
     const increment = () => {
         if (valor < stock) {
@@ -32,7 +34,9 @@ const ItemCount = ({stock , initial, onAdd }) => {
                 <Button onClick={increment} variant="primary" size="lg">+</Button>{' '}
             </div>
             <div>
-                <Button onClick={ () => onAdd(valor)} variant="primary" size="lg">Agregar al carrito</Button>{' '}
+                <>
+                <Button onClick={ () => onAdd(valor) } variant="primary" size="lg">Agregar al carrito</Button>{' '}
+                </>
             </div>
         </>
     );

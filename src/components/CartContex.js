@@ -7,19 +7,6 @@ const CartContextProvider = ({ children }) => {
 
     const agregarAlCarrito = (item , cant ) => {
         let esta = listaCarrito.find(producto => producto.itemId === item.id)
-    //     if (esta === undefined) {
-    //     SetListaCarrito([
-    //         ...listaCarrito,
-    //         {
-    //             itemId: item.id,
-    //             tituloItem: item.titulo,
-    //             valorItem: item.precio,
-    //             cantItem: cant
-    //         }
-    //     ]);
-    // } else {
-    //     esta.cantItem += cant;
-    // }
         esta === undefined
         ? SetListaCarrito([
             ...listaCarrito,
@@ -58,7 +45,6 @@ const CartContextProvider = ({ children }) => {
         let cantTotal = listaCarrito.map(item => item.cantItem);
         return cantTotal.reduce(((prev, curr) => prev + curr), 0);
     }
-
 
     return (
         <CartContext.Provider value={

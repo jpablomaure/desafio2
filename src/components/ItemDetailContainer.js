@@ -10,10 +10,8 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         firestoreFetchUno(idItem)
             .then(result => setDatos(result))
-            .catch(err => console.log(err))
+            .catch(err => alert(err))
     }, [idItem]);
-
-
 
     return (
         <>

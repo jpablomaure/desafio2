@@ -28,6 +28,6 @@ export const firestoreFetchUno = async (idItem) => {
         }
     } else {
       // doc.data() will be undefined in this case
-        console.log("No such document!");
+        alert("No such document!");
     }
 }

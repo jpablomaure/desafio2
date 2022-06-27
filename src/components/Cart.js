@@ -33,8 +33,6 @@ const Cart = () => {
             fecha: serverTimestamp()
         };
 
-        console.log(orden);
-
         const crearOrdenEnFirestore = async () => {
             const nuevaOrden = doc(collection(db, "ordenes"));
             await setDoc(nuevaOrden, orden);
@@ -43,7 +41,7 @@ const Cart = () => {
 
         crearOrdenEnFirestore()
             .then(result => alert('Su orden ha sido creada. Orden nro: ' + result.id))
-            .catch(err => console.log(err));
+            .catch(err => alert(err));
 
         acceso.borrarCarrito();
     }
@@ -77,15 +75,13 @@ const Cart = () => {
                             <p className="totalTienda"><strong>Total del Carrito: </strong>$ {acceso.calcTotalCarrito()}</p>
                         </div>
                         <div className="row totalTienda">
-                        <Button onClick={() => acceso.borrarCarrito()} variant="primary" size="lg">Vaciar Carrito</Button>
-                        <Link to='/'><Button variant="primary" size="lg">Seguir Comprando</Button>{' '}</Link>
-                        <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
+                            <Button onClick={() => acceso.borrarCarrito()} variant="primary" size="lg">Vaciar Carrito</Button>
+                            <Link to='/'><Button variant="primary" size="lg">Seguir Comprando</Button>{' '}</Link>
+                            <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
                         </div>
-                        </>
+                    </>
                     : <Link to='/'><Button variant="primary" size="lg">Ir a comprar</Button>{' '}</Link>
                 }
-
-                
             </div>
         </div>
     );
