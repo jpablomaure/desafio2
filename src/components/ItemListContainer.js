@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         firestoreFetch(categoriaId)
             .then(result => setDatos(result))
-            .catch(err => alert(err,"salio error"));
+            .catch(err => alert(err,"error"));
     }, [categoriaId]); //debe tener dependencias para que vuelva a hacer esto cuando el catId cambie
 
     useEffect(() => {

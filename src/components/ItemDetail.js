@@ -1,20 +1,17 @@
 
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import ItemCount from './ItemCount.js';
 import { useState, useContext} from 'react';
 import { CartContext } from './CartContex';
 import { ToastContainer, toast } from 'react-toastify';
-import Button from 'react-bootstrap/Button';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
 
 const ItemDetail = ({item}) => {
     const [cantidadItem , SetCantidadItem] = useState(0);
     const prueba = useContext(CartContext);
     
-    const onAdd = (cant, titulo) => {
+    const onAdd = (cant) => {
 
         SetCantidadItem(cant);
         prueba.agregarAlCarrito(item, cant);
@@ -41,6 +38,10 @@ const ItemDetail = ({item}) => {
                         :  <>
                                 <Link to='/cart' style={{textDecoration: "none"}}>
                                     <div className="btn btn-sm btn-outline-secondary">Al Carrito</div>
+                                    
+                                </Link>
+                                <Link to='/'>
+                                    <div className="btn btn-sm btn-outline-secondary">Seguir Comprando</div>
                                 </Link>
                                 <ToastContainer />
                             </>

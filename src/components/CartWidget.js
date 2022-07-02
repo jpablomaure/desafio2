@@ -10,7 +10,7 @@ function CartWidget(){
         <>
             <Link to='/cart' className="btn btn-sm btn-outline-secondary">
                 <BsFillCartFill />
-                <Badge bg="secondary">{acceso.calcTotalItem()}</Badge>
+                <Badge bg="info">{acceso.calcTotalItem()}</Badge>
             </Link>
         </>
     );

@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { serverTimestamp, updateDoc , doc , setDoc , increment , collection} from 'firebase/firestore';
 import db from '../utils/firebaseConfig';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
     const acceso = useContext(CartContext);
@@ -40,7 +42,8 @@ const Cart = () => {
         }
 
         crearOrdenEnFirestore()
-            .then(result => alert('Su orden ha sido creada. Orden nro: ' + result.id))
+            .then(result => 
+                toast('Su orden ha sido creada. Orden nro: ' + result.id))
             .catch(err => alert(err));
 
         acceso.borrarCarrito();
@@ -80,7 +83,10 @@ const Cart = () => {
                             <Button onClick={crearOrden} variant="primary" size="lg">Pasar por caja</Button>{' '}
                         </div>
                     </>
-                    : <Link to='/'><Button variant="primary" size="lg">Ir a comprar</Button>{' '}</Link>
+                    : <>
+                    <Link to='/'><Button variant="primary" size="lg">Ir a comprar</Button>{' '}</Link>
+                    <ToastContainer />
+                    </>
                 }
             </div>
         </div>
